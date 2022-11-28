@@ -47,10 +47,10 @@ function getMovieInfo(movieName){
 };
 
 function printMovieInfo(movie){
-    console.log(`${movie} directed by ${movie.director}. ${movie.description} that runs for ${movie.runtime}`)
+    console.log(`${movie.title} directed by ${movie.director}. A story of ${movie.description} that runs for ${movie.runtime} minutes.`)
 };
 
-getMovieInfo('ET').then(printMovieInfo, err => console.warn(err));
+getMovieInfo('Rocky horror picture Show').then(printMovieInfo, err => console.warn(err));
 getMovieInfo('ET').then(printMovieInfo).catch(err => console.error(err));
 
 
