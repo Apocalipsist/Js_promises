@@ -47,10 +47,10 @@ function getMovieInfo(movieName){
 };
 
 function printMovieInfo(movie){
-    console.log(movie)
+    console.log(`${movie} directed by ${movie.director}. ${movie.description} that runs for ${movie.runtime}`)
 };
 
-getMovieInfo('ET').then(printMovieInfo);
+getMovieInfo('ET').then(printMovieInfo, err => console.warn(err));
 getMovieInfo('ET').then(printMovieInfo).catch(err => console.error(err));
 
 
